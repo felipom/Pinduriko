@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddAtividadesTable extends Migration
+class AddNotasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class AddAtividadesTable extends Migration
      */
     public function up()
     {
-        Schema::create('atividades', function (Blueprint $table) {
+        Schema::create('notas', function (Blueprint $table) {
             $table->increments('id');           //código identificador
             $table->string('title');            //título da atividade
             $table->string('description');      //descrição da atividade
@@ -30,7 +30,7 @@ class AddAtividadesTable extends Migration
      */
     public function down()
     {
-        Schema::table('atividades', function (Blueprint $table) {
+        Schema::table('notas', function (Blueprint $table) {
             //
         });
     }

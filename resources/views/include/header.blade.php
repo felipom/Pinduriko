@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-	<a class="navbar-brand" href="/">Gerenciador de Atividades</a>
+	<a class="navbar-brand" href="/notas">Gerenciador de Notas</a>
 	
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 		<span class="navbar-toggler-icon"></span>
@@ -13,16 +13,10 @@
 			
 
 			<li class="nav-item">
-				<a class="nav-link" href="/atividades" id="help" aria-haspopup="true" aria-expanded="false">Listar Atividades</a>
+				<a class="nav-link" href="/notas" id="help" aria-haspopup="true" aria-expanded="false">Listar Notas</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" href="/atividades/create" id="help" aria-haspopup="true" aria-expanded="false">Criar Atividades</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="/mensagens" id="help" aria-haspopup="true" aria-expanded="false">Listar Mensagens</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="/mensagens/create" id="help" aria-haspopup="true" aria-expanded="false">Criar Mensagens</a>
+				<a class="nav-link" href="/notas/create" id="help" aria-haspopup="true" aria-expanded="false">Criar Nota</a>
 			</li>
 		</ul>
 

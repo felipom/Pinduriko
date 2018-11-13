@@ -18,24 +18,15 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/atividades', 'AtividadeController@index');
-Route::get('/mensagens', 'MensagemController@index');
+Route::get('/notas', 'NotasController@index');
 
 Route::group(['middleware' => 'auth'], function(){
-	Route::get('/atividades/create', 'AtividadeController@create');
-	Route::post('/atividades', 'AtividadeController@store');
-	Route::get('/atividades/{id}', 'AtividadeController@show');
-	Route::get('/atividades/{id}/edit', 'AtividadeController@edit');
-	Route::put('/atividades/{id}', 'AtividadeController@update');
-	Route::get('/atividades/{id}/delete', 'AtividadeController@delete');
-	Route::delete('/atividades/{id}', 'AtividadeController@destroy');
-	Route::get('/mensagens/create', 'MensagemController@create');
-	Route::post('/mensagens', 'MensagemController@store');
-	Route::get('/mensagens/{id}', 'MensagemController@show');
-	Route::get('/mensagens/{id}/edit', 'MensagemController@edit');
-	Route::put('/mensagens/{id}', 'MensagemController@update');
-	Route::get('/mensagens/{id}/delete', 'MensagemController@delete');
-	Route::delete('/mensagens/{id}', 'MensagemController@destroy');
+	Route::get('/notas/create', 'NotasController@create');
+	Route::post('/notas', 'NotasController@store');
+	Route::get('/notas/{id}', 'NotasController@show');
+	Route::get('/notas/{id}/edit', 'NotasController@edit');
+	Route::put('/notas/{id}', 'NotasController@update');
+	Route::get('/notas/{id}/delete', 'AtividadeController@delete');
+	Route::delete('/notas/{id}', 'NotasController@destroy');
 });
-
 

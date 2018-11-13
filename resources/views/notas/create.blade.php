@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-<h1>Formulário de Cadastro de Atividade</h1>
+<h1>Formulário de Cadastro de Notas</h1>
 <hr>
 
   <!-- EXIBE MENSAGENS DE ERROS -->
@@ -16,7 +16,7 @@
 	</div>
   @endif
 
-<form action="/atividades" method="post">
+<form action="/notas" method="post">
 	{{ csrf_field() }}
 	Título: 		<input type="text" name="title"> 	     <br>
 	Descrição:		<input type="text" name="description">   <br>
