@@ -12,12 +12,10 @@
                 @yield('content')
         </div>
 
-        <div class="container-fluid">
-            <footer class="row">
-                @include('include.footer')
-            </footer>
-        </div>
+        <footer class="page-footer font-small blue fixed-bottom">
 
+        @include('include.footer')
+        </footer> 
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}" defer></script>
         @yield('javascript')

@@ -1,8 +1,8 @@
 <meta charset="utf-8">
-<meta name="description" content="Sistema de gerenciamento de Atividades">
+<meta name="description" content="Sistema de gerenciamento de Notas">
 <meta name="author" content="Tiago">
 
-<title>Gerenciador de Atividades</title>
+<title>Gerenciador de Notas</title>
 
 <!-- load fontwesome -->
 <script src="https://use.fontawesome.com/releases/v5.0.9/js/all.js"></script>

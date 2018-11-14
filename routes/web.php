@@ -26,7 +26,7 @@ Route::group(['middleware' => 'auth'], function(){
 	Route::get('/notas/{id}', 'NotasController@show');
 	Route::get('/notas/{id}/edit', 'NotasController@edit');
 	Route::put('/notas/{id}', 'NotasController@update');
-	Route::get('/notas/{id}/delete', 'AtividadeController@delete');
+	Route::get('/notas/{id}/delete', 'NotasController@delete');
 	Route::delete('/notas/{id}', 'NotasController@destroy');
 });
 

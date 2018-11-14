@@ -4,6 +4,7 @@ use App\Notas;
 use Illuminate\Http\Request;
 use \Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Auth;
+
 class NotasController extends Controller
 {
     /**
@@ -15,16 +16,15 @@ class NotasController extends Controller
     {
         //checa se o usuário está cadastrado
         if( Auth::check() ){   
-            //retorna somente as Notas cadastradas pelo usuário cadastrado
-            $listaNotas = Notas::where('user_id', Auth::id() )->get();     
+            //retorna somente as notas cadastradas pelo usuário cadastrado
+            $listarNotas = Notas::where('user_id', Auth::id() )->get();     
         }else{
-            //retorna todas as notas
-            $listaNotas = Notas::all();
-
+            //retorna todas as Notas
+            $listarNotas = Notas::all();
         }
                 
-        $listaNotas = Notas::paginate(1);
-        return view('notas.list',['notas' => $listaNotas]);
+        $listarNotas = Notas::paginate(1);
+        return view('notas.list',['notas' => $listarNotas]);
     }
     /**
      * Show the form for creating a new resource.
@@ -46,9 +46,9 @@ class NotasController extends Controller
         //faço as validações dos campos
         //vetor com as mensagens de erro
         $messages = array(
-            'title.required' => 'É obrigatório um título para a atividade',
-            'description.required' => 'É obrigatória uma descrição para a atividade',
-            'scheduledto.required' => 'É obrigatório o cadastro da data/hora da atividade',
+            'title.required' => 'É obrigatório um título para a notas',
+            'description.required' => 'É obrigatória uma descrição para a notas',
+            'scheduledto.required' => 'É obrigatório o cadastro da data/hora da notas',
         );
         //vetor com as especificações de validações
         $regras = array(
@@ -92,15 +92,15 @@ class NotasController extends Controller
      */
     public function edit($id)
     {
-        //busco os dados do obj Atividade que o usuário deseja editar
+        //busco os dados do obj notas que o usuário deseja editar
         $obj_Notas = Notas::find($id);
         
-        //verifico se o usuário logado é o dono da Atividade
+        //verifico se o usuário logado é o dono da notas
         if( Auth::id() == $obj_Notas->user_id ){
             //retorno a tela para edição
             return view('notas.edit',['notas' => $obj_Notas]);    
         }else{
-            //retorno para a rota /atividades com o erro
+            //retorno para a rota /notas com o erro
             return redirect('/notas')->withErrors("Você não tem permissão para editar este item");
         }
            
@@ -117,9 +117,9 @@ class NotasController extends Controller
         //faço as validações dos campos
         //vetor com as mensagens de erro
         $messages = array(
-            'title.required' => 'É obrigatório um título para a atividade',
-            'description.required' => 'É obrigatória uma descrição para a atividade',
-            'scheduledto.required' => 'É obrigatório o cadastro da data/hora da atividade',
+            'title.required' => 'É obrigatório um título para a notas',
+            'description.required' => 'É obrigatória uma descrição para a notas',
+            'scheduledto.required' => 'É obrigatório o cadastro da data/hora da notas',
         );
         //vetor com as especificações de validações
         $regras = array(
@@ -142,7 +142,7 @@ class NotasController extends Controller
         $obj_notas->scheduledto = $request['scheduledto'];
         $obj_notas->user_id     = Auth::id();
         $obj_notas->save();
-        return redirect('/notas')->with('success', 'Atividade alterada com sucesso!!');
+        return redirect('/notas')->with('success', 'Nota alterada com sucesso!!');
     }
     /**
      * Show the form for deleting the specified resource.
@@ -154,13 +154,13 @@ class NotasController extends Controller
     {
         $obj_Notas = Notas::find($id);
         
-        //verifico se o usuário logado é o dono da Atividade
+        //verifico se o usuário logado é o dono da nota
         if( Auth::id() == $obj_Notas->user_id ){
             //retorno o formulário questionando se ele tem certeza
             return view('notas.delete',['notas' => $obj_Notas]);    
         }else{
-            //retorno para a rota /atividades com o erro
-            return redirect('/notas')->withErrors("Você não tem permissão para deletar este item");
+            //retorno para a rota /notas com o erro
+            return redirect('/notas')->withErrors("Você não tem permissão para deletar esta nota");
         }
     }
     /**
@@ -173,6 +173,6 @@ class NotasController extends Controller
     {
         $obj_notas = Notas::findOrFail($id);
         $obj_notas->delete($id);
-        return redirect('/notas')->with('sucess','Atividade excluída com Sucesso!!');
+        return redirect('/notas')->with('sucess','Nota excluída com Sucesso!!');
     }
 }
