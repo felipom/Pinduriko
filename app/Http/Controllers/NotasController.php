@@ -23,7 +23,9 @@ class NotasController extends Controller
             $listarNotas = Notas::all();
         }
                 
-        $listarNotas = Notas::paginate(1);
+        $listarNotas = Notas::paginate(10);
+
+
         return view('notas.list',['notas' => $listarNotas]);
     }
     /**

@@ -1,9 +1,9 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg">
 
 	<div class="collapse navbar-collapse" id="navbarSupportedContent">
 		<ul class="navbar-nav mr-auto">
 			<li class="nav-item active">
-				<a class="nav-link" href="/home"><i class="fas fa-home"></i> EstágioR&A <span class="sr-only">(current)</span></a>
+				<a class="nav-link" href="/home"><i class="fas fa-home"></i> EstágioR&A<span class="sr-only">(current)</span></a>
 			</li>
 			
 			
@@ -16,7 +16,7 @@
 		</ul>
 
 		<!-- Right Side Of Navbar -->
-		<ul class="navbar-nav ml-auto">
+		<ul class="navbar-nav ml-auto right">
 			<!-- Authentication Links -->
 			@guest
 			<li><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>
@@ -41,3 +41,21 @@
 		</ul>
 	</div>
 </nav>
+
+<script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/jquery.cookie.js' %}"></script>
+    <script src="{% static 'js/lightbox.min.js' %}"></script>
+    <script src="{% static 'js/front.js' %}"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-124689317-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-124689317-1');
+    </script>

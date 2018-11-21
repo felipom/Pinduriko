@@ -25,18 +25,18 @@
   @endif
 
 <div class="container">
-@foreach($notas as $notas)
+@foreach($notas as $n)
   <br>
   <div class="row">
     <div class="col-md-12">
-     <p class="h3"><a href="/notas/{{$notas->id}}">{{$notas->title}}</a></p>
-     <p class="h5">Agendado para: <b>{{\Carbon\Carbon::parse($notas->scheduledto)->format('d/m/Y h:m')}}</b></p>
+     <p class="h3"><a href="/notas/{{$n->id}}">{{$n->title}}</a></p>
+     <p class="h5">Agendado para: <b>{{\Carbon\Carbon::parse($n->scheduledto)->format('d/m/Y h:m')}}</b></p>
 
       @auth
         <p class="h7">Ações: 
-          <a class="btn btn-outline-primary btn-sm" href="/notas/{{$notas->id}}">Ver Mais</a>
-          <a class="btn btn-outline-primary btn-sm" href="/notas/{{$notas->id}}/edit">Editar</a> 
-          <a class="btn btn-outline-primary btn-sm" href="/notas/{{$notas->id}}/delete">Deletar</a>
+          <a class="btn btn-outline-primary btn-sm" href="/notas/{{$n->id}}">Ver Mais</a>
+          <a class="btn btn-outline-primary btn-sm" href="/notas/{{$n->id}}/edit">Editar</a> 
+          <a class="btn btn-outline-primary btn-sm" href="/notas/{{$n->id}}/delete">Deletar</a>
         </p>
       @endauth
     </div>
@@ -45,7 +45,7 @@
 @endforeach
 </div>
 
-
+{{ $notas->links() }}
 
 @auth
 <br>
