@@ -1,16 +1,21 @@
 @extends('layouts.app')
 @section('content')
-<h1>notas {{$notas->id}}</h1>
+<h1 class="nav-link">Nota <b>{{$notas->title}}</b></h1>
 <hr>
-<h3><b>ID:</b> {{$notas->id}}</h3>
-<h3><b>Título:</b> {{$notas->title}}</h3>
-<h3><b>Agendado para:</b> {{\Carbon\Carbon::parse($notas->scheduledto)->format('d/m/Y h:m')}}</h3>
-<h3><b>Descrição:</b> {{$notas->description}}</h3>
-<h3><b>Criada em:</b> {{\Carbon\Carbon::parse($notas->created_at)->format('d/m/Y h:m')}}</h3>
-<h3><b>Atualizada em:</b> {{\Carbon\Carbon::parse($notas->updated_at)->format('d/m/Y h:m')}}</h3>
+<p class="nav-link">
+<b]>Título:</b> {{$notas->title}}
+
+<b]>Data:</b> {{\Carbon\Carbon::parse($notas->scheduledto)->format('d/m/Y')}}
+
+<b>Descrição:</b> {{$notas->description}}
+
+<br>
+@auth
+	<a class="btn" href="/notas/{{$notas->id}}/edit">Editar</a> 
+	<a class="btn" href="/notas/{{$notas->id}}/delete">Deletar</a>
+@endauth
 
 @endsection
 
 
-
-<!-- \Carbon\Carbon::parse($notas->scheduledto)->format('d/m/Y h:m')  -->
+<!-- \Carbon\Carbon::parse($notas->scheduledto)->format('d/m/Y')  -->

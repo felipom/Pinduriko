@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-<center><h1>Formulário de Edição da Nota {{$notas->id}}</h1>
+<center><h1>Editando nota <b>{{$notas->id}}</b></h1>
 <hr>
 
   <!-- EXIBE MENSAGENS DE ERROS -->
@@ -21,8 +21,8 @@
 	{{ method_field('PUT') }}
 	Título: 		<input type="text" name="title" value="{{$notas->title}}"><br><br>
 	Descrição:		<input type="text" name="description" value="{{$notas->description}}"><br><br>
-	Agendado para:  <input type="datetime-local" name="scheduledto" value="{{$notas->scheduledto}}"><br><br>
-	<input type="submit" value="Salvar">
+	Data:  <input type="datetime-local" name="scheduledto" value="{{$notas->scheduledto}}"><br><br>
+	<input class="btn" type="submit" value="Salvar">
 </form>
 </center>
 @endsection

@@ -14,7 +14,8 @@ class NotasTableSeeder extends Seeder
         Notas::create([
             'title' => 'Nota Exemplo',
             'description' => 'Nota Exemplo',
-            'scheduledto' => '2018-09-01 13:15:00',
+            'scheduledto' => '2018-09-01',
+            'hour' => '23:00',
             'user_id' => 1
         ]);
     }

@@ -2,6 +2,23 @@
 <html>
     <head>
         @include('include.head')
+        <style>
+        .btn{
+            color: white;
+            background-color: #FF8C00;
+            border-color: #FF8C00;
+        }
+        body{
+            background-color: #4F4F4F; 
+        }
+        .navbar{
+            background-color: #FF8C00;
+        }
+        .nav-link{
+            color: white;
+        }
+
+        </style>
     </head>
     <body>
         

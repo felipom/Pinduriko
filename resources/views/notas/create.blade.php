@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-<h1>Formulário de Cadastro de Notas</h1>
+<h1 class="nav-link">Cadastrar Nota</h1>
 <hr>
 
   <!-- EXIBE MENSAGENS DE ERROS -->
@@ -15,12 +15,13 @@
 	  </div>
 	</div>
   @endif
-
 <form action="/notas" method="post">
 	{{ csrf_field() }}
-	Título: 		<input type="text" name="title"> 	     <br>
-	Descrição:		<input type="text" name="description">   <br>
-	Agendado para:  <input type="datetime-local" name="scheduledto">   <br>
-	<input type="submit" value="Salvar">
+	<p class="nav-link">Título: <input type="text" name="title">
+	<p class="nav-link">Descrição: <input type="text" name="description">
+	<p class="nav-link">Data: <input type="date" name="scheduledto">
+	<p class="nav-link">Horas: <input type="time" name="hour">
+	<br><br>
+	<input class="btn"type="submit" value="Salvar">
 </form>
 @endsection
