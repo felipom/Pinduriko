@@ -17,6 +17,30 @@
         .nav-link{
             color: white;
         }
+        .h7{
+            color: white;
+        }
+
+
+
+        .as:link {
+   color: #FF8C00;
+}
+
+/* link que foi visitado */
+.as:visited {
+    color: #FF8C00;
+}
+
+/* mouse over */
+.as:hover {
+    color: white;
+}
+
+/* link selecionado */
+.as:active {
+    color: white;
+}
 
         </style>
     </head>

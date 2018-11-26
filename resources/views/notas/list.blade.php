@@ -29,7 +29,8 @@
   <br>
   <div class="row">
     <div class="col-md-12">
-     <p class="h3 nav-link "><a href="/notas/{{$n->id}}">{{$n->title}}</a></p>
+    <hr>
+     <p class="h3 nav-link "><a class="as" href="/notas/{{$n->id}}">{{$n->title}}</a></p>
      <p class="h5 nav-link ">Agendado para: <b>{{\Carbon\Carbon::parse($n->scheduledto)->format('d/m/Y h:m')}}</b></p>
 <br>
       @auth
