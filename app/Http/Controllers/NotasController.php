@@ -69,8 +69,10 @@ class NotasController extends Controller
         //se passou pelas validações, processa e salva no banco...
         $obj_Notas = new Notas();
         $obj_Notas->title =       $request['title'];
+        $obj_Notas->day =       $request['day'];
         $obj_Notas->description = $request['description'];
         $obj_Notas->scheduledto = $request['scheduledto'];
+        $obj_Notas->hour = $request['hour'];
         $obj_Notas->user_id     = Auth::id();
         $obj_Notas->save();
         return redirect('/notas')->with('success', 'Nota criada com sucesso!!');
@@ -140,8 +142,10 @@ class NotasController extends Controller
         //se passou pelas validações, processa e salva no banco...
         $obj_notas = Notas::findOrFail($id);
         $obj_notas->title =       $request['title'];
+        $obj_notas->day =       $request['day'];
         $obj_notas->description = $request['description'];
         $obj_notas->scheduledto = $request['scheduledto'];
+        $obj_notas->hour = $request['hour'];
         $obj_notas->user_id     = Auth::id();
         $obj_notas->save();
         return redirect('/notas')->with('success', 'Nota alterada com sucesso!!');

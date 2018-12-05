@@ -21,6 +21,9 @@
             color: white;
         }
 
+.page-footer{
+    background-color: #FF8C00; 
+}
 
 
         .as:link {
@@ -41,6 +44,30 @@
 .as:active {
     color: white;
 }
+
+
+
+
+
+/* link que foi visitado */
+.ab:visited {
+    color: white;
+}
+
+/* mouse over */
+.ab:hover {
+    color: black;
+}
+
+/* link selecionado */
+.ab:active {
+    color: black;
+}
+
+
+
+
+
 
         </style>
     </head>

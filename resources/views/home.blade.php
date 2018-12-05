@@ -5,6 +5,7 @@
                 <div class="card-body">
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
+                        Seja bem vindo
                             {{ session('status') }}
                         </div>
                     @endif
@@ -14,7 +15,7 @@
         </div>
     </div><br>
     <center>
-        <h4><a href="/notas">Notas</a></h4>
+        <h4 class="h7 btn"><a class="ab" href="/notas">Notas</a></h4>
     </center>
 </div>
 @endsection

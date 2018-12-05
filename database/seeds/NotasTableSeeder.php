@@ -12,8 +12,9 @@ class NotasTableSeeder extends Seeder
     public function run()
     {
         Notas::create([
-            'title' => 'Nota Exemplo',
-            'description' => 'Nota Exemplo',
+            'title' => 'estagio',
+            'day' => 'segunda',
+            'description' => 'Naaaa',
             'scheduledto' => '2018-09-01',
             'hour' => '23:00',
             'user_id' => 1

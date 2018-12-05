@@ -46,7 +46,7 @@
                                         <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> {{ __('Lembrar minha senha') }}
                                     </label>
                                     <br>
- <a href="{{ route('password.request') }}">
+                                        <a class=" h7 ab "href="{{ route('password.request') }}">
                                     {{ __('Esqueceu sua Senha?') }}
                                 </a>
                                 </div>
@@ -55,7 +55,7 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn">
+                                <button type="submit" class="btn ab">
                                     {{ __('Login') }}
                                 </button>
 
