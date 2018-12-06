@@ -15,7 +15,7 @@
         </div>
     </div><br>
     <center>
-        <h4 class="h7 btn"><a class="ab" href="/notas">Notas</a></h4>
+        <h4 class="h7 btn"><a class="ab" href="/produtos"> Produtos </a></h4>
     </center>
 </div>
 @endsection

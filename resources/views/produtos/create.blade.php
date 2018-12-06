@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-<h1 class="nav-link">Cadastrar Nota</h1>
+<h1 class="nav-link">Gerar Nota Fiscal</h1>
 <hr>
 
   <!-- EXIBE MENSAGENS DE ERROS -->
@@ -17,11 +17,10 @@
   @endif
 <form action="/notas" method="post">
 	{{ csrf_field() }}
-	<p class="nav-link">Título: <input type="text" name="title">
-	<p class="nav-link">Dia: <input type="text" name="day">
+	<p class="nav-link">Cliente: <input type="text" name="client">
+	<p class="nav-link">Produto: <input type="text" name="product">
+	<p class="nav-link">Preço: <input type="time" name="price">
 	<p class="nav-link">Data: <input type="date" name="scheduledto">
-	<p class="nav-link">Horas cumpridas: <input type="time" name="hour">
-	<p class="nav-link">Descrição: <input type="text" name="description">
 	<br><br>
 	<input class="btn ab"type="submit" value="Salvar">
 </form>

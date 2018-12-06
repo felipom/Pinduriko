@@ -1,8 +1,8 @@
 <?php
 use Illuminate\Database\Seeder;
-use App\Notas;
+use App\Produtos;
 
-class NotasTableSeeder extends Seeder
+class ProdutosTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,12 +11,11 @@ class NotasTableSeeder extends Seeder
      */
     public function run()
     {
-        Notas::create([
-            'title' => 'estagio',
-            'day' => 'segunda',
-            'description' => 'Naaaa',
+        Produtos::create([
+            'client' => 'Felipe',
+            'product' => 'Pastel',
+            'price' => '20',
             'scheduledto' => '2018-09-01',
-            'hour' => '23:00',
             'user_id' => 1
         ]);
     }

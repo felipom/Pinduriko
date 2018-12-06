@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-<p class=" nav-link h1 text-center">Notas</p>
+<p class=" nav-link h1 text-center">Nota Fiscal</p>
 
   <!-- EXIBE MENSAGENS DE SUCESSO -->
   @if(\Session::has('success'))
@@ -25,19 +25,18 @@
   @endif
 
 <div class="container ">
-@foreach($notas as $n)
+@foreach($produtos as $n)
   <br>
   <div class="row">
     <div class="col-md-12">
     <hr>
-     <h2 class="h3 nav-link "><a class="as" href="/notas/{{$n->id}}">{{$n->title}}</a></h2>
+     <h2 class="h3 nav-link "><a class="as" href="/produtos/{{$n->id}}">{{$n->Client}}</a></h2>
      <p class="h5 nav-link ">Data: <b>{{\Carbon\Carbon::parse($n->scheduledto)->format('d/m/Y')}}</b></p>
-     <p class="h5 nav-link ">Horas cumpridas: <b>{{\Carbon\Carbon::parse($n->hour)->format('h:m')}} horas</b></p>
 <br>
       @auth
-          <a class="btn ab" href="/notas/{{$n->id}}">Sobre</a>
-          <a class="btn ab" href="/notas/{{$n->id}}/edit">Editar</a> 
-          <a class="btn ab" href="/notas/{{$n->id}}/delete">Apagar</a>
+          <a class="btn ab" href="/produtos/{{$n->id}}">Visualizar</a>
+          <a class="btn ab" href="/produtos/{{$n->id}}/edit">Editar</a> 
+          <a class="btn ab" href="/produtos/{{$n->id}}/delete">Deletar</a>
       @endauth
     </div>
   </div>
@@ -45,7 +44,7 @@
 @endforeach
 </div>
 
-{{ $notas->links() }}
+{{ $produtos->links() }}
 
 @auth
 
@@ -53,7 +52,7 @@
   <div class="row">
     <div class="col-md-12">
       <p class="text-center">
-      <a class="btn ab" href="/notas/create">Criar Nota</a></p>
+      <a class="btn ab" href="/produtos/create">Criar Nota Fiscal</a></p>
     </div>
 </div>
 </div>

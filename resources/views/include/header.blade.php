@@ -3,15 +3,15 @@
 	<div class="collapse navbar-collapse" id="navbarSupportedContent">
 		<ul class="navbar-nav mr-auto">
 			<li class="nav-item active">
-				<a class="nav-link ab" href="/home"><i class="fas fa-home"></i> EstágioREA<span class="sr-only">(current)</span></a>
+				<a class="nav-link ab" href="/home"><i class="fas fa-home"></i>Pinduriko<span class="sr-only">(current)</span></a>
 			</li>
 			
 			
 			<li class="nav-item">
-				<a class="nav-link ab" href="/notas" id="help" aria-haspopup="true" aria-expanded="false">Listar Notas</a>
+				<a class="nav-link ab" href="/notas" id="help" aria-haspopup="true" aria-expanded="false">Listar Notas Fiscais</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link ab" href="/notas/create" id="help" aria-haspopup="true" aria-expanded="false">Criar Nota</a>
+				<a class="nav-link ab" href="/notas/create" id="help" aria-haspopup="true" aria-expanded="false">Criar Nota Fiscal</a>
 			</li>
 		</ul>
 

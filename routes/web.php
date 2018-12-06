@@ -18,15 +18,15 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/notas', 'NotasController@index');
+Route::get('/produtos', 'ProdutosController@index');
 
 Route::group(['middleware' => 'auth'], function(){
-	Route::get('/notas/create', 'NotasController@create');
-	Route::post('/notas', 'NotasController@store');
-	Route::get('/notas/{id}', 'NotasController@show');
-	Route::get('/notas/{id}/edit', 'NotasController@edit');
-	Route::put('/notas/{id}', 'NotasController@update');
-	Route::get('/notas/{id}/delete', 'NotasController@delete');
-	Route::delete('/notas/{id}', 'NotasController@destroy');
+	Route::get('/produtos/create', 'ProdutosController@create');
+	Route::post('/produtos', 'ProdutosController@store');
+	Route::get('/produtos/{id}', 'ProdutosController@show');
+	Route::get('/produtos/{id}/edit', 'ProdutosController@edit');
+	Route::put('/produtos/{id}', 'ProdutosController@update');
+	Route::get('/produtos/{id}/delete', 'ProdutosController@delete');
+	Route::delete('/produtos/{id}', 'ProdutosController@destroy');
 });
 
