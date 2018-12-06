@@ -8,10 +8,10 @@
 			
 			
 			<li class="nav-item">
-				<a class="nav-link ab" href="/notas" id="help" aria-haspopup="true" aria-expanded="false">Listar Notas Fiscais</a>
+				<a class="nav-link ab" href="/produtos" id="help" aria-haspopup="true" aria-expanded="false">Listar produtos Fiscais</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link ab" href="/notas/create" id="help" aria-haspopup="true" aria-expanded="false">Criar Nota Fiscal</a>
+				<a class="nav-link ab" href="/produtos/create" id="help" aria-haspopup="true" aria-expanded="false">Criar Nota Fiscal</a>
 			</li>
 		</ul>
 

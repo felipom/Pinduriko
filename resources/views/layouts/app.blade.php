@@ -4,45 +4,45 @@
         @include('include.head')
         <style>
         .btn{
-            color: white;
-            background-color: #FF8C00;
-            border-color: #FF8C00;
+            color: black;
+            background-color: #A4D3EE;
+            border-color: #A4D3EE;
         }
         body{
             background-color: #4F4F4F; 
         }
         .navbar{
-            background-color: #FF8C00;
+            background-color: #A4D3EE;
         }
         .nav-link{
-            color: white;
+            color: black;
         }
         .h7{
-            color: white;
+            color: black;
         }
 
 .page-footer{
-    background-color: #FF8C00; 
+    background-color: #A4D3EE; 
 }
 
 
         .as:link {
-   color: #FF8C00;
+   color: #A4D3EE;
 }
 
 /* link que foi visitado */
 .as:visited {
-    color: #FF8C00;
+    color: #A4D3EE;
 }
 
 /* mouse over */
 .as:hover {
-    color: white;
+    color: black;
 }
 
 /* link selecionado */
 .as:active {
-    color: white;
+    color: black;
 }
 
 
@@ -51,7 +51,7 @@
 
 /* link que foi visitado */
 .ab:visited {
-    color: white;
+    color: black;
 }
 
 /* mouse over */
