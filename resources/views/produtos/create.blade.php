@@ -15,11 +15,11 @@
 	  </div>
 	</div>
   @endif
-<form action="/notas" method="post">
+<form action="/produtos" method="post">
 	{{ csrf_field() }}
 	<p class="nav-link">Cliente: <input type="text" name="client">
 	<p class="nav-link">Produto: <input type="text" name="product">
-	<p class="nav-link">Preço: <input type="time" name="price">
+	<p class="nav-link">Preço: <input type="float" name="price">
 	<p class="nav-link">Data: <input type="date" name="scheduledto">
 	<br><br>
 	<input class="btn ab"type="submit" value="Salvar">

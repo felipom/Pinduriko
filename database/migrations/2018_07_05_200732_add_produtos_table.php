@@ -17,7 +17,7 @@ class AddProdutosTable extends Migration
             $table->increments('id');           //código identificador
             $table->string('client');            //título da nota
             $table->string('product');            //título da nota
-            $table->string('price');      //descrição da nota
+            $table->float('price');      //descrição da nota
             $table->date('scheduledto');    //data
             $table->integer('user_id')->unsigned(); //user ID
             $table->timestamps();               //registro created_at e updated_at
